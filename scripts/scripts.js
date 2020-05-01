@@ -4,7 +4,7 @@ var area = document.getElementById('area'),
 
 area.addEventListener('click', function(event)
 {
-	if(isWinner == true) return;
+	if(isWinner == true || event.target.innerText == 'Х' || event.target.innerText == 'О') return;
 	if(move == 0) 
 	{
 		event.target.innerHTML = 'Х';
@@ -18,7 +18,7 @@ area.addEventListener('click', function(event)
 	CheckWinner()
 });
 
-function CheckWinner(param)
+function CheckWinner()
 {
 	var boxes = document.getElementsByClassName('box');
 	var arr = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
@@ -27,12 +27,12 @@ function CheckWinner(param)
 	{
 		if(boxes[arr[i][0]].innerHTML == 'Х' && boxes[arr[i][1]].innerHTML == 'Х' && boxes[arr[i][2]].innerHTML == 'Х')
 		{
-			alert('Победили крестики');
+			var a = document.getElementById('winnerMessage').innerHTML = 'Победили крестики! Поздравляем!'
 			isWinner = true;
 		}
 		else if(boxes[arr[i][0]].innerHTML == 'О' && boxes[arr[i][1]].innerHTML == 'О' && boxes[arr[i][2]].innerHTML == 'О')
 		{
-			alert('Победили нолики');
+			document.getElementById('winnerMessage').innerHTML = 'Победили нолики! Поздравляем!'
 			isWinner = true;
 		}
 	}
