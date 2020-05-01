@@ -1,23 +1,7 @@
 var area = document.getElementById('area'),
 	move = 0,
 	isWinner = false;
-
-area.addEventListener('click', function(event)
-{
-	if(isWinner == true || event.target.innerText == 'Х' || event.target.innerText == 'О') return;
-	if(move == 0) 
-	{
-		event.target.innerHTML = 'Х';
-		move = 1;
-	}
-	else
-	{
-		event.target.innerHTML = 'О';
-		move = 0;
-	}
-	CheckWinner()
-});
-
+	
 function CheckWinner()
 {
 	var boxes = document.getElementsByClassName('box');
@@ -37,3 +21,19 @@ function CheckWinner()
 		}
 	}
 }
+
+area.addEventListener('click', function(event)
+{
+	if(isWinner == true || event.target.innerText == 'Х' || event.target.innerText == 'О') return;
+	if(move == 0) 
+	{
+		event.target.innerHTML = 'Х';
+		move = 1;
+	}
+	else
+	{
+		event.target.innerHTML = 'О';
+		move = 0;
+	}
+	CheckWinner()
+});
