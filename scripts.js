@@ -2,5 +2,5 @@ var area = document.getElementById('area');
 
 area.addEventListener('click', function(event)
 {
-	event.target.innerHTML = 'Х';
+	event.target.innerHTML = 'x';
 })
