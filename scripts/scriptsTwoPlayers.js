@@ -14,7 +14,7 @@ function CheckWinner()
 			document.getElementById('winnerMessage').innerHTML = 'Победили крестики! Поздравляем!';
 			isWinner = true;
 		}
-		else if(boxes[arr[i][0]] == 2 && boxes[arr[i][1]] == 2 && boxes[arr[i][2]] == 2)
+		else if(workMatrix[arr[i][0]] == 2 && workMatrix[arr[i][1]] == 2 && workMatrix[arr[i][2]] == 2)
 		{
 			document.getElementById('winnerMessage').innerHTML = 'Победили нолики! Поздравляем!';
 			isWinner = true;
