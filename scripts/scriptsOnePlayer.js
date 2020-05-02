@@ -27,8 +27,8 @@ function SetFirstEmptyBox()
 	{
 		if(workMatrix[i] == 0)
 		{
-			document.getElementById('box' + (i+1)).innerHTML = '<img src="4.png" width="80" height="80"/>';
 			workMatrix[i] = 2;
+			document.getElementById('box' + (i+1)).innerHTML = '<img src="4.png" width="80" height="80"/>';
 			break;
 		}
 	}
