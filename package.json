@@ -1,0 +1,20 @@
+{
+  "name": "ppse",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №4 завершена.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IPZ-15-ppse/ZhukMS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IPZ-15-ppse/ZhukMS/issues"
+  },
+  "homepage": "https://github.com/IPZ-15-ppse/ZhukMS#readme"
+}

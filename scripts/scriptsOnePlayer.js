@@ -6,7 +6,7 @@
 * устанавливается в true, когда
 * один из игроков победил
 * 
-* @var             bool   isWinner */
+* @var             {bool}   isWinner */
 var isWinner = false;
 /** 
 * Массив рабочего поля игры 
@@ -16,7 +16,7 @@ var isWinner = false;
 * устанавливаются в 1 - если поле заполнено крестиком,
 * или 2 - если поле заполнено ноликом
 * 
-* @var             Array   workMatrix */	
+* @var             {Array}   workMatrix */	
 var workMatrix = [0,0,0,0,0,0,0,0,0]
 /** 
 * Проверка победителя 

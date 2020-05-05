@@ -1,4 +1,32 @@
-/** 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: scriptsTwoPlayers.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: scriptsTwoPlayers.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** 
 * Признак очередности ходов
 * 
 * Целочисленная переменная
@@ -40,14 +68,14 @@ function CheckWinner()
 {
 	var arr = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
 	
-	for(var i = 0; i < arr.length; i++)
+	for(var i = 0; i &lt; arr.length; i++)
 	{
-		if(workMatrix[arr[i][0]] == 1 && workMatrix[arr[i][1]] == 1 && workMatrix[arr[i][2]] == 1)
+		if(workMatrix[arr[i][0]] == 1 &amp;&amp; workMatrix[arr[i][1]] == 1 &amp;&amp; workMatrix[arr[i][2]] == 1)
 		{
 			document.getElementById('winnerMessage').innerHTML = 'Победили крестики! Поздравляем!';
 			isWinner = true;
 		}
-		else if(workMatrix[arr[i][0]] == 2 && workMatrix[arr[i][1]] == 2 && workMatrix[arr[i][2]] == 2)
+		else if(workMatrix[arr[i][0]] == 2 &amp;&amp; workMatrix[arr[i][1]] == 2 &amp;&amp; workMatrix[arr[i][2]] == 2)
 		{
 			document.getElementById('winnerMessage').innerHTML = 'Победили нолики! Поздравляем!';
 			isWinner = true;
@@ -66,13 +94,13 @@ function Box1Click()
 	if(isWinner == true || workMatrix[0] != 0) return;
 	if(move == 0)
 	{
-		document.getElementsByClassName('box1')[0].innerHTML = '<img src="1.png" width="80" height="80"/>'
+		document.getElementsByClassName('box1')[0].innerHTML = '&lt;img src="1.png" width="80" height="80"/>'
 		workMatrix[0] = 1;
 		move = 1;
 	}
 	else
 	{
-		document.getElementsByClassName('box1')[0].innerHTML = '<img src=\"2.png\" width=\"80\" height=\"80\">'
+		document.getElementsByClassName('box1')[0].innerHTML = '&lt;img src=\"2.png\" width=\"80\" height=\"80\">'
 		workMatrix[0] = 2;
 		move = 0;
 	}
@@ -90,13 +118,13 @@ function Box2Click()
 	if(isWinner == true || workMatrix[1] != 0) return;
 	if(move == 0)
 	{
-		document.getElementsByClassName('box2')[0].innerHTML = '<img src="1.png" width="80" height="80"/>'
+		document.getElementsByClassName('box2')[0].innerHTML = '&lt;img src="1.png" width="80" height="80"/>'
 		workMatrix[1] = 1;
 		move = 1;
 	}
 	else
 	{
-		document.getElementsByClassName('box2')[0].innerHTML = '<img src=\"2.png\" width=\"80\" height=\"80\">'
+		document.getElementsByClassName('box2')[0].innerHTML = '&lt;img src=\"2.png\" width=\"80\" height=\"80\">'
 		workMatrix[1] = 2;
 		move = 0;
 	}
@@ -114,13 +142,13 @@ function Box3Click()
 	if(isWinner == true || workMatrix[2] != 0) return;
 	if(move == 0)
 	{
-		document.getElementsByClassName('box3')[0].innerHTML = '<img src="1.png" width="80" height="80"/>'
+		document.getElementsByClassName('box3')[0].innerHTML = '&lt;img src="1.png" width="80" height="80"/>'
 		workMatrix[2] = 1;
 		move = 1;
 	}
 	else
 	{
-		document.getElementsByClassName('box3')[0].innerHTML = '<img src=\"2.png\" width=\"80\" height=\"80\">'
+		document.getElementsByClassName('box3')[0].innerHTML = '&lt;img src=\"2.png\" width=\"80\" height=\"80\">'
 		workMatrix[2] = 2;
 		move = 0;
 	}
@@ -138,13 +166,13 @@ function Box4Click()
 	if(isWinner == true || workMatrix[3] != 0) return;
 	if(move == 0)
 	{
-		document.getElementsByClassName('box4')[0].innerHTML = '<img src="1.png" width="80" height="80"/>'
+		document.getElementsByClassName('box4')[0].innerHTML = '&lt;img src="1.png" width="80" height="80"/>'
 		workMatrix[3] = 1;
 		move = 1;
 	}
 	else
 	{
-		document.getElementsByClassName('box4')[0].innerHTML = '<img src=\"2.png\" width=\"80\" height=\"80\">'
+		document.getElementsByClassName('box4')[0].innerHTML = '&lt;img src=\"2.png\" width=\"80\" height=\"80\">'
 		workMatrix[3] = 2;
 		move = 0;
 	}
@@ -162,13 +190,13 @@ function Box5Click()
 	if(isWinner == true || workMatrix[4] != 0) return;
 	if(move == 0)
 	{
-		document.getElementsByClassName('box5')[0].innerHTML = '<img src="1.png" width="80" height="80"/>'
+		document.getElementsByClassName('box5')[0].innerHTML = '&lt;img src="1.png" width="80" height="80"/>'
 		workMatrix[4] = 1;
 		move = 1;
 	}
 	else
 	{
-		document.getElementsByClassName('box5')[0].innerHTML = '<img src=\"2.png\" width=\"80\" height=\"80\">'
+		document.getElementsByClassName('box5')[0].innerHTML = '&lt;img src=\"2.png\" width=\"80\" height=\"80\">'
 		workMatrix[4] = 2;
 		move = 0;
 	}
@@ -186,13 +214,13 @@ function Box6Click()
 	if(isWinner == true || workMatrix[5] != 0) return;
 	if(move == 0)
 	{
-		document.getElementsByClassName('box6')[0].innerHTML = '<img src="1.png" width="80" height="80"/>'
+		document.getElementsByClassName('box6')[0].innerHTML = '&lt;img src="1.png" width="80" height="80"/>'
 		workMatrix[5] = 1;
 		move = 1;
 	}
 	else
 	{
-		document.getElementsByClassName('box6')[0].innerHTML = '<img src=\"2.png\" width=\"80\" height=\"80\">'
+		document.getElementsByClassName('box6')[0].innerHTML = '&lt;img src=\"2.png\" width=\"80\" height=\"80\">'
 		workMatrix[5] = 2;
 		move = 0;
 	}
@@ -210,13 +238,13 @@ function Box7Click()
 	if(isWinner == true || workMatrix[6] != 0) return;
 	if(move == 0)
 	{
-		document.getElementsByClassName('box7')[0].innerHTML = '<img src="1.png" width="80" height="80"/>'
+		document.getElementsByClassName('box7')[0].innerHTML = '&lt;img src="1.png" width="80" height="80"/>'
 		workMatrix[6] = 1;
 		move = 1;
 	}
 	else
 	{
-		document.getElementsByClassName('box7')[0].innerHTML = '<img src=\"2.png\" width=\"80\" height=\"80\">'
+		document.getElementsByClassName('box7')[0].innerHTML = '&lt;img src=\"2.png\" width=\"80\" height=\"80\">'
 		workMatrix[6] = 2;
 		move = 0;
 	}
@@ -234,13 +262,13 @@ function Box8Click()
 	if(isWinner == true || workMatrix[7] != 0) return;
 	if(move == 0)
 	{
-		document.getElementsByClassName('box8')[0].innerHTML = '<img src="1.png" width="80" height="80"/>'
+		document.getElementsByClassName('box8')[0].innerHTML = '&lt;img src="1.png" width="80" height="80"/>'
 		workMatrix[7] = 1;
 		move = 1;
 	}
 	else
 	{
-		document.getElementsByClassName('box8')[0].innerHTML = '<img src=\"2.png\" width=\"80\" height=\"80\">'
+		document.getElementsByClassName('box8')[0].innerHTML = '&lt;img src=\"2.png\" width=\"80\" height=\"80\">'
 		workMatrix[7] = 2;
 		move = 0;
 	}
@@ -258,16 +286,39 @@ function Box9Click()
 	if(isWinner == true || workMatrix[8] != 0) return;
 	if(move == 0)
 	{
-		document.getElementsByClassName('box9')[0].innerHTML = '<img src="1.png" width="80" height="80"/>'
+		document.getElementsByClassName('box9')[0].innerHTML = '&lt;img src="1.png" width="80" height="80"/>'
 		workMatrix[8] = 1;
 		move = 1;
 	}
 	else
 	{
-		document.getElementsByClassName('box9')[0].innerHTML = '<img src=\"2.png\" width=\"80\" height=\"80\">'
+		document.getElementsByClassName('box9')[0].innerHTML = '&lt;img src=\"2.png\" width=\"80\" height=\"80\">'
 		workMatrix[8] = 2;
 		move = 0;
 	}
 	CheckWinner();
 }
 
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Box1Click">Box1Click</a></li><li><a href="global.html#Box2Click">Box2Click</a></li><li><a href="global.html#Box3Click">Box3Click</a></li><li><a href="global.html#Box4Click">Box4Click</a></li><li><a href="global.html#Box5Click">Box5Click</a></li><li><a href="global.html#Box6Click">Box6Click</a></li><li><a href="global.html#Box7Click">Box7Click</a></li><li><a href="global.html#Box8Click">Box8Click</a></li><li><a href="global.html#Box9Click">Box9Click</a></li><li><a href="global.html#CheckWinner">CheckWinner</a></li><li><a href="global.html#isWinner">isWinner</a></li><li><a href="global.html#move">move</a></li><li><a href="global.html#workMatrix">workMatrix</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Tue May 05 2020 19:41:32 GMT+0300 (GMT+03:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
